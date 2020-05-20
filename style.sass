@@ -1,0 +1,337 @@
+// COMMON
+@mixin font-lato
+    font-family: 'Lato', sans-serif
+
+@mixin font-montserrat
+    font-family: 'Montserrat', sans-serif
+
+*
+    text-decoration: none
+    box-sizing: border-box    
+body 
+    color: #414141
+.section-inner
+    width: 1180px
+    margin: 0 auto;
+
+// COMMON
+
+//HEADER
+.section-header
+    color:#fff
+    background: url('../img/header.png') no-repeat center 
+    background-size: cover   
+    position: relative
+   
+    &::before
+        content: ""
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        background-color: #142729
+        opacity: .47
+        position: absolute
+        
+    .section-inner
+        height: 100vh    
+        position: relative
+        z-index: 10
+        display: flex
+        flex-direction: column       
+    &-logo
+        @include font-lato
+        font-weight: 700
+        font-size: 24px
+        flex-shrink: 1
+        padding-top: 35px
+    &-content    
+        flex-grow: 1
+        display: flex
+        align-items: center
+    &-wrapper
+        margin: 0 auto
+        &__title,
+        &__subtitle
+          
+            text-align: center
+           
+        &__title  
+            @include font-lato   
+            font-weight: bold
+            font-size: 55px
+            line-height: 60px
+            margin-bottom: 16px
+        &__subtitle
+            @include font-montserrat            
+            font-size: 18px
+            font-weight: 400
+            line-height: 32px
+            margin-bottom: 44px
+        &__form
+            display: flex
+            width: 1021px
+            &-input
+                flex: 1;
+                padding-right: 40px
+                input
+                    @include font-montserrat            
+                    font-size: 16px
+                    font-weight: 400
+                    border-radius: 4px
+                    border: none
+                    background: rgba(255,255,255,.25)
+                    color: white
+                    margin: 0
+                    padding: 16px 20px
+                    outline: none
+                    width: 100%
+                    &::placeholder
+                        color: white
+            &-button   
+                button
+                    cursor: pointer
+                    @include font-montserrat            
+                    outline: none
+                    padding: 16px 20px
+                    font-size: 16px
+                    font-weight: 400
+                    border-radius: 4px  
+                    border: none
+                    background: linear-gradient(to right, #fe985b 0%, #fe4fa7 100%)
+                    color: white
+                    margin: 0
+
+// HEADER />
+
+// PROMO
+.section-promo
+    padding-top: 120px
+    padding-bottom: 120px    
+
+.section-promo-1
+    display: flex
+    &__content,
+    &__video
+        flex-basis: 50%
+    &__content
+        @include font-lato
+        padding-right: 90px
+        .title
+            font-size: 35px
+            line-height: 51px
+            font-weight: bold
+            margin-bottom: 56px
+        .subtitle
+            font-size: 18px
+            font-weight: bald
+            margin-top: 30px
+        .text
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            color: #6c6c6c
+            margin-top: 14px
+    &__video
+        img
+            width: 100%
+            height: auto
+
+.section-promo-2
+    display: flex
+    margin-top: 120px   
+    padding-top: 86px       
+    border-top: 1px solid #e2e2e2
+    &__item + &__item
+        margin-left: 40px
+    &__item
+        @include font-lato
+        display: flex
+        flex-direction: column 
+        text-align: center
+        .icon
+             margin-bottom: 20px
+        .title
+            font-size: 18px
+            font-weight: 700
+            margin-bottom: 14px
+        .content
+            color: #6c6c6c
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            
+// PROMO />
+
+// FOUNDER
+
+.section-founder
+    margin-top: 130px
+    @include font-lato
+    position: relative
+    background-color: #f6fafd
+    .section-inner
+        padding-top: 35px
+        display: flex
+    &__img
+        align-self: flex-end
+    &__content    
+        margin-left: 55px
+        align-self: center
+        &-text
+            font-size: 24px
+            font-weight: 400
+            line-height: 40px
+        &-name
+            margin-top: 40px
+            font-size: 24px
+            font-weight: 700
+        &-post
+            font-size: 20px
+            font-weight: 400
+        
+
+// FOUNDER />
+
+// PLANS
+.section-plans
+    @include font-lato
+    padding-top: 120px
+    padding-bottom: 120px
+    &__title,
+    &__subtitle
+        text-align: center
+    &__title
+        font-size: 36px
+        font-weight: 700
+        line-height: 51px
+        margin-bottom: 17px
+    &__subtitle
+        width: 50%
+        margin: 0 auto
+        color: #6c6c6c
+        font-size: 16px
+        font-weight: 300
+        line-height: 28px
+        margin-bottom: 60px
+    &__list
+        display: flex
+        justify-content: center
+        &-item
+            padding: 50px 45px
+            flex-basis: 370px
+            text-align: center
+            &__title
+                font-size: 14px
+                font-weight: 700
+                text-transform: uppercase
+            &__price
+                padding-top: 27px
+                .prefix
+                    color: #fe4fa7
+                    font-size: 72px
+                    font-weight: 700
+                .postfix
+                    font-size: 14px
+                    font-weight: 700
+            &__description
+                color: #6c6c6c
+                font-size: 16px
+                font-weight: 300
+                line-height: 28px
+                margin: 28px
+            &__button
+                margin: 40px
+                display: inline
+                width: 190px
+                border-radius: 4px
+                border: 1px solid #979797
+                padding: 16px 50px
+                a
+                    color: #414141
+                    text-decoration: none
+        .active
+            background-color: #f6fafd
+            .section-plans__list-item__button
+                border: none
+                background: linear-gradient(to right, #fe985b 0%, #fe4fa7 100%)
+                a
+                    color: #ffffff
+// PLANS />
+
+// FREE    
+.section-free 
+    @include font-lato    
+    text-align: center
+    color: white
+    background-image: linear-gradient(to right, #fe985b 0%, #fe4fa7 100%)
+    &__title
+        padding-top: 120px
+        font-size: 55px
+        font-weight: 700
+        line-height: 60px
+        margin-bottom: 27px
+    &__description
+        width: 43%
+        margin: 0 auto 70px
+        font-size: 20px
+        font-weight: 400
+        line-height: 30px
+    &__button
+        padding-bottom: 120px
+        a
+            color: #464646
+            font-family: Lato
+            font-size: 18px
+            font-weight: 400
+            text-decoration: none
+            background-color: white
+            padding: 16px 50px
+            border-radius: 4px
+// FREE  />
+
+// FOOTER
+.section-footer
+    @include font-lato
+    text-align: center
+    color: #464646
+    a
+        text-decoration: none
+    li    
+        list-style: none    
+    &__logo
+        padding-top: 85px
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 30px
+    &__nav
+        text-transform: uppercase
+        display: flex
+        justify-content: center
+        font-size: 14px
+        font-weight: 700
+        line-height: 20px
+        margin-bottom: 30px
+        a
+            color: #414141
+        li + li 
+            margin-left: 80px
+        .active
+            color: #fe4fa7
+    &__media
+        margin-bottom: 25px
+        a + a
+            margin-left: 15px
+        img
+            width: 15px
+            height: 15px
+    &__copyright_and_links
+        span
+            font-size: 14px
+            font-weight: 400
+        span + span
+           margin-left: 30px
+        padding-bottom: 90px   
+
+
+// FOOTER />
